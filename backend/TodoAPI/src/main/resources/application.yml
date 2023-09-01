@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  application:
+    name: DRUG-API
+  datasource:
+    username: drone
+    password: password
+    driver-class-name: org.h2.Driver
+    tomcat:
+      test-while-idle: true
+      validation-query: SELECT 1
+    name: drugdb
+    generate-unique-name: false
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      path: /console
+      enabled: true
+      settings:
+        web-allow-others: true
