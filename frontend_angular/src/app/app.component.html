@@ -1,0 +1,34 @@
+<div>
+  <form [formGroup]="drugForm">
+    <div>
+      <label for="n"> Name</label>
+      <input type="text" formControlName="name" id="n">
+    </div>
+    <div>
+      <label for="bd">Brand Name</label>
+      <input type="text" formControlName="brand_name" id="bd">
+    </div>
+
+    <div class="d-grid gap-2">
+      <button type="button" name="" id="" class="btn btn-primary" (click)="createDrug()">Submit</button>
+    </div>
+
+
+
+    
+
+  </form>
+</div>
+<hr>
+
+<div>
+  <div class="d-grid gap-2">
+    <button type="button" name="" id="" class="btn btn-primary" (click)="listAllDrug()">View All Drugs</button>
+  </div>
+  <div *ngFor="let drug of drugList">
+    <div>
+      {{drug.name}}
+    </div>
+
+  </div>
+</div>
